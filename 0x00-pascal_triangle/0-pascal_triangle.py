@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
 """
-
+ALX pascal's Triangle challenge
 """
 
 def pascal_triangle(n):
+    """
+    Return a list of numbers fon Pascal's Triangle
+    """
     if n <= 0:
         return []
 
