@@ -14,7 +14,7 @@ def validUTF8(data):
 
     for byte in data:
         if num_bytes == 0:
-           
+
             if (byte & 0b10000000) == 0:
                 continue  # 1-byte character
             elif (byte & 0b11100000) == 0b11000000:
@@ -32,5 +32,4 @@ def validUTF8(data):
                 return False
             num_bytes -= 1
 
-    
     return num_bytes == 0
