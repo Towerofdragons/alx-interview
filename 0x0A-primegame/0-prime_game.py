@@ -1,12 +1,17 @@
 #!/usr/bin/python3
 """
-
+Maria and Ben are playing a game.
+Given a set of consecutive integers starting from 1 up to and including n,
+they take turns choosing a prime number from the set and
+removing that number and
+its multiples from the set. The player that cannot make a move loses the game.
 """
+
+
 def isWinner(x, nums):
     """
     Find the winner of most games.
     """
-
     if not nums or x < 1:
         return None
 
@@ -33,7 +38,8 @@ def isWinner(x, nums):
 
     for n in nums:
         # Assuming Maria always goes first
-        # If the number of primes up to n is odd, Maria wins; otherwise, Ben wins
+        # If the number of primes up to n is odd, Maria wins;
+        # otherwise, Ben wins
         if prime_count[n] % 2 == 1:
             maria_wins += 1
         else:
